@@ -1,0 +1,71 @@
+ALGORITHM ex1
+VAR
+    x: INTEGER;
+    y: INTEGER;
+BEGIN
+ecrire ("donne moi la valeur de x")
+lire(x)
+y:=x*2;
+ecrire("voici la resultat",y)
+END
+ALGORITHM ex2
+VAR
+    x:INTEGER;
+    y:INTEGER;
+    z:INTEGER;
+    sum:INTEGER
+BEGIN
+    ecrire(donne la valeur de x)
+    lire(x)
+    ecrire(donne la valeur de y)
+    lire(y)
+    ecrire(donne la valeur de z)
+    lire(z)
+    sum=x+y+z
+    ecrire(voici la somme,sum)
+END
+ALGORITHM ex3
+VAR
+    a:INTEGER
+    b:INTEGER
+BEGIN
+    ecrire(donne la valeur de a en seconde)
+    lire(a)
+    b=a/60
+    ecrire(voici la valeur de minute,b)
+END
+ALGORITHM ex4
+VAR
+    phrase:string
+    nb:INTEGER
+BEGIN
+    ecrire(donne la phrase)
+    lire (phrase)
+    nb=phrase.lenght
+    ecrire(voici la longeur ,nb)
+END
+ALGORITHM ex5
+VAR
+    phrase:string
+    nb:INTEGER 0
+BEGIN
+FOR i FROM 0 TO phrase.lenght STEP 1  DO
+    IF (phrase[i]==" ") THEN
+        nb:=nb+1
+    END_IF
+    END_FOR
+    ecrire(voici le nombre des mots,nb)
+END
+ALGORITHM ex6
+VAR
+    phrase:string
+    nb:INTEGER
+    ph:=phrase.tolowercase
+BEGIN
+    FOR i FROM 0 TO ph.lenght STEP 1  DO
+        IF (ph[i] in ["a","e","u","i","o","y"]) THEN
+            nb:=nb+1
+        END_IF
+    END_FOR
+    ecrire(voici le nombre des voyelle,nb)
+END
